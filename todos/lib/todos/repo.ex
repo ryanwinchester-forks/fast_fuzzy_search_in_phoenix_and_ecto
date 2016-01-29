@@ -4,9 +4,9 @@ defmodule Todos.Repo do
 ### A simple means to execute raw sql
 Usage:
 ```
-[record | _]AccessIO.Repo.execute_and_load("SELECT * FROM users WHERE id = $1", [1], User)
+[record | _] = Todos.Repo.execute_and_load("SELECT * FROM todos WHERE id = $1", [1], User)
 record
-# => %User{...}
+# => %Todo{...}
 ```
 """
 

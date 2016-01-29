@@ -88,7 +88,7 @@ Enum.each(1..1000, fn(n) -> DatabaseSeeder.add_random_todo end)
 Now, we can seed our database with:
 
 ```
-$ mix run priv/repo/seeds.exs
+$ mix deps.get && mix run priv/repo/seeds.exs
 ```
 
 ## Adding Search To Our Model: Enter Levenshtein
@@ -230,7 +230,7 @@ But first, let's experiment with it a bit and learn what we will be utilizing.
 ## Using The Levenshtein Function
 Let's fire up `psql` and play a bit.
 
-```
+```SQL
 $ psql
 postgres# \c todos_dev
 todos_dev=# SELECT levenshtein('ABC', 'ABCD');
@@ -244,7 +244,7 @@ Since it would take 1 more character to become the string `ABCD`, we get the out
 
 We can reverse the arguments, too:
 
-```
+```SQL
 todos_dev=# SELECT levenshtein('ABCD', 'ABC');
 levenshtein
 -------------

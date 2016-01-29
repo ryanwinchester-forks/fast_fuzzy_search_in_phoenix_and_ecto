@@ -15,4 +15,4 @@ defmodule DatabaseSeeder do
   end
 end
 
-Enum.each(1..1000, fn(n) -> DatabaseSeeder.add_random_todo end)
+Enum.each(1..10, fn(n) -> DatabaseSeeder.add_random_todo end)
