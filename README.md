@@ -252,6 +252,11 @@ levenshtein
 (1 row)
 ```
 
+Now, levenshtein distance works great for short strings, but if were matching something like a paragraph, it would have a much larger search space.
+Keep this in mind when using it for searches like this.
+If you are after searching a large amount of space, an inverted index is more likely what you are after.
+As with all tools, it has this function has its use case for optimal performance.
+
 ## Implementing It In Our Model
 Now, we can add this functionality to our model quite easily with the help of the functions we wrote earlier in `lib/todos/repo.ex`.
 
