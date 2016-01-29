@@ -32,6 +32,7 @@ To do this we just use another generator.
 
 ```
 $ mix phoenix.gen.model Todo todos name:string
+$ mix ecto.migrate
 ```
 
 Now that we have a model, if we want to search anything we should have some of them in our database.
@@ -76,11 +77,12 @@ $ vi priv/repo/seeds.exs
 ```elixir
 defmodule DatabaseSeeder do
   def add_random_todo do
+    Faker.start
     Todos.Repo.insert!(%Todos.Todo{name: Faker.Company.En.bullshit})
   end
 end
 
-Enum.each(1..1000, fn(n) -> add_random_todo end)
+Enum.each(1..1000, fn(n) -> DatabaseSeeder.add_random_todo end)
 ```
 
 Now, we can seed our database with:
