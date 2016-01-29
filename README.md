@@ -211,9 +211,9 @@ Now, to see it in action:
 
 ```elixir
 $ iex -S mix
-iex(1)> Todos.Repo.insert(%Todo{name: "stuff"})
-iex(2)> alias Todos.Todo
-iex(3)> alias Todos.Repo
+iex(1)> alias Todos.Todo
+iex(2)> alias Todos.Repo
+iex(3)> Todos.Repo.insert(%Todo{name: "stuff"})
 iex(4)> [todo|_]= Repo.execute_and_load("SELECT * FROM todos;", [], Todo)
 iex(5)> todo
 %Todos.Todo{__meta__: #Ecto.Schema.Metadata<:loaded>, id: 1,
