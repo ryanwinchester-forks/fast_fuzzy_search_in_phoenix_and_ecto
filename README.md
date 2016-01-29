@@ -201,7 +201,7 @@ Now, on to `execute_and_load/3`:
 ```
 
 This part is a bit easier on the eyes.
-`__MODULE__` expants into the name of the current module name as an atom type.
+`__MODULE__` expands into the name of the current module name as an atom type.
 
 `sql` is a sql query expected as a string.
 
