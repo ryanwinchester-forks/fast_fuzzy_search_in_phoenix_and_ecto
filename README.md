@@ -335,6 +335,8 @@ If you enjoyed this, follow me on [Twitter](https://twitter.com/yburyug).
 
 The code is available on [Github](https://github.com/cometaworks/fast_fuzzy_search_in_phoenix_and_ecto)
 
+Also, thanks [@Ch4s3](https://github.com/Ch4s3) for the PR's tidying up the small details and proofreading/editing.
+
 And if you'd like to have some design, software craftsmanship, or other general tech needs fulfilled feel free to give us a buzz at
 
 <a href="http://cometa.works"><div alt="CometaWorks" style="text-align:center"><img src ="http://i.imgur.com/hYxiTro.png" /></div></a>
