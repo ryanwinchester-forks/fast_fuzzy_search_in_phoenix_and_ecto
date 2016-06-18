@@ -138,7 +138,7 @@ Now, we will add a couple of functions to execute raw sql and then associate it 
 A simple means to execute raw sql
 Usage:
 
-[record | _]Todos.Repo.execute_and_load("SELECT * FROM users WHERE id = $1", [1], Todo)
+[record | _] = Todos.Repo.execute_and_load("SELECT * FROM users WHERE id = $1", [1], Todo)
 record
  => %Todo{...}
 """
